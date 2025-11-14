@@ -1,0 +1,21 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
+PUBLIC_URL = os.getenv("PUBLIC_URL", "")
+MANAGER_PORT = int(os.getenv("MANAGER_PORT", 8080))
+WEBHOOK_SECRET_PATH = os.getenv("WEBHOOK_SECRET_PATH", "")
+TELEGRAM_SECRET_TOKEN = os.getenv("TELEGRAM_SECRET_TOKEN")
+CORE_URL = os.getenv("CORE_URL")
+
+class Settings:
+    TELEGRAM_BOT_TOKEN = TELEGRAM_BOT_TOKEN
+    PUBLIC_URL = PUBLIC_URL
+    MANAGER_PORT = MANAGER_PORT
+    WEBHOOK_SECRET_PATH = WEBHOOK_SECRET_PATH
+    TELEGRAM_SECRET_TOKEN = TELEGRAM_SECRET_TOKEN
+    CORE_URL = CORE_URL
+
+settings = Settings()
